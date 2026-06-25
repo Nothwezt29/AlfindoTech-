@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AlfindoTech | Security Technology Solution</title>
+    <meta name="description" content="Dummy frontend statis AlfindoTech untuk GitHub Pages.">
+    <meta name="keywords" content="CCTV, access door, security alarm, maintenance CCTV, jasa pasang CCTV, sistem keamanan">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-xl sticky-top bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand brand-mark" href="./index.html" data-track="nav_home">
+                <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <span>Alfindo<span>Tech</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Buka navigasi">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" id="mainNav" tabindex="-1">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title brand-mark">Alfindo<span>Tech</span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Tutup"></button>
+                </div>
+                <div class="offcanvas-body align-items-xl-center">
+                    <ul class="navbar-nav ms-auto align-items-xl-center gap-xl-2">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./about.html">Tentang</a></li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</button>
+                            <ul class="dropdown-menu border-0 shadow-sm">
+                                <li><a class="dropdown-item" href="./service-cctv.html">CCTV</a></li>
+                                <li><a class="dropdown-item" href="./service-access-door.html">Access Door</a></li>
+                                <li><a class="dropdown-item" href="./service-security-alarm.html">Security Alarm</a></li>
+                                <li><a class="dropdown-item" href="./service-maintenance.html">Maintenance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="./portfolio.html">Portofolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./contact.html">Kontak</a></li>
+                        <li class="nav-item d-flex gap-2 small lang-switch">
+                            <a href="#home">ID</a>
+                            <a href="#home">EN</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-primary ms-xl-3" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20pengunjung%20website%20dan%20tertarik%20dengan%20layanan%20Anda." target="_blank" rel="noopener" data-track="nav_whatsapp">
+                        <i class="fa-brands fa-whatsapp me-2"></i>WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="home">
+        <section class="hero">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <span class="eyebrow">Best Security Services</span>
+                        <h1>Your Best Security Technology Solution</h1>
+                        <p>Bangun sistem keamanan yang rapi sejak awal: CCTV, access door, alarm, maintenance, dan otomasi terintegrasi untuk rumah maupun bisnis.</p>
+                        <div class="hero-actions">
+                            <a class="btn btn-primary btn-lg" href="./contact.html" data-track="hero_quote">Minta Penawaran</a>
+                            <a class="btn btn-outline-light btn-lg" href="./portfolio.html" data-track="hero_portfolio">Lihat Portofolio</a>
+                        </div>
+                        <div class="hero-proof">
+                            <div><strong>1x24 jam</strong><span>Respon lead</span></div>
+                            <div><strong>2 kantor</strong><span>Depok & Tangerang</span></div>
+                            <div><strong>4 layer</strong><span>Proteksi keamanan</span></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="quote-panel">
+                            <h2>Estimasi cepat</h2>
+                            <p>Hitung kebutuhan awal sebelum survey lokasi.</p>
+                            <label for="cameraCount">Jumlah kamera</label>
+                            <input id="cameraCount" type="range" min="2" max="32" value="8">
+                            <div class="estimate-line"><span>Kamera</span><strong id="cameraOutput">8 titik</strong></div>
+                            <div class="estimate-line"><span>Area prioritas</span><strong>Indoor + Outdoor</strong></div>
+                            <div class="estimate-total"><span>Mulai dari</span><strong id="estimateOutput">Rp 8.800.000</strong></div>
+                            <a class="btn btn-danger w-100" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20ingin%20konsultasi%20estimasi%20sistem%20keamanan." target="_blank" rel="noopener" data-track="estimate_whatsapp">Konsultasi WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <img class="feature-image" src="https://alfindotech.biz.id/image/site/about.webp" alt="Teknisi sistem keamanan AlfindoTech" loading="lazy">
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="section-heading">
+                            <span>Tentang Kami</span>
+                            <h2>Kami menawarkan sistem keamanan dan layanan berkualitas</h2>
+                        </div>
+                        <p class="lead">AlfindoTech bergerak di bidang keamanan dan teknologi jaringan untuk rumah, kantor, gudang, retail, dan ruang usaha. Setiap solusi dirancang sesuai kebutuhan, bukan sekadar menjual perangkat.</p>
+                        <div class="row g-3 mt-3">
+                            <div class="col-sm-6"><div class="value-box"><i class="fa-solid fa-clipboard-check"></i><strong>Survey akurat</strong><span>Titik perangkat disusun berdasarkan risiko lokasi.</span></div></div>
+                            <div class="col-sm-6"><div class="value-box"><i class="fa-solid fa-screwdriver-wrench"></i><strong>Teknisi rapi</strong><span>Instalasi bersih, terdokumentasi, dan mudah dirawat.</span></div></div>
+                            <div class="col-sm-6"><div class="value-box"><i class="fa-solid fa-mobile-screen"></i><strong>Monitoring mudah</strong><span>Akses mobile, rekaman, dan kontrol dibuat praktis.</span></div></div>
+                            <div class="col-sm-6"><div class="value-box"><i class="fa-solid fa-headset"></i><strong>Dukungan cepat</strong><span>Lead masuk ke database dan siap ditindaklanjuti.</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section section-muted">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span>Layanan</span>
+                    <h2>Satu vendor untuk beberapa lapisan keamanan</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-3">
+                        <article class="service-card">
+                            <i class="fa-solid fa-video"></i>
+                            <h3>CCTV</h3>
+                            <p>Instalasi, maintenance, dan perbaikan CCTV untuk rumah, kantor, gudang, sekolah, dan area komersial.</p>
+                            <a href="./service-cctv.html">Detail layanan <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <article class="service-card">
+                            <i class="fa-solid fa-door-closed"></i>
+                            <h3>Access Door</h3>
+                            <p>Kontrol akses pintu berbasis kartu, PIN, sidik jari, face recognition, dan integrasi absensi.</p>
+                            <a href="./service-access-door.html">Detail layanan <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <article class="service-card">
+                            <i class="fa-solid fa-bell"></i>
+                            <h3>Security Alarm</h3>
+                            <p>Alarm keamanan dengan sensor gerak, sensor pintu, beam sensor, siren, dan notifikasi cepat.</p>
+                            <a href="./service-security-alarm.html">Detail layanan <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-3">
+                        <article class="service-card">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <h3>Maintenance</h3>
+                            <p>Perawatan preventif dan korektif agar sistem keamanan stabil, bersih, dan siap digunakan.</p>
+                            <a href="./service-maintenance.html">Detail layanan <i class="fa-solid fa-arrow-right"></i></a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="section">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span>Portofolio</span>
+                    <h2>Proyek yang sudah dikerjakan</h2>
+                </div>
+                <div class="portfolio-grid">
+                    <article class="portfolio-card">
+                        <img src="https://alfindotech.biz.id/image/portfolio/project_1.webp" alt="CCTV Project" loading="lazy">
+                        <div><span>CCTV</span><h3>CCTV Project</h3><p>Pemasangan CCTV Hikvision untuk area operasional.</p></div>
+                    </article>
+                    <article class="portfolio-card">
+                        <img src="https://alfindotech.biz.id/image/portfolio/project_2.webp" alt="Teknisi CCTV" loading="lazy">
+                        <div><span>CCTV</span><h3>Teknisi CCTV</h3><p>Instalasi dan pengujian kamera pada titik strategis.</p></div>
+                    </article>
+                    <article class="portfolio-card">
+                        <img src="https://alfindotech.biz.id/image/portfolio/project_3.webp" alt="Teknisi Access Control" loading="lazy">
+                        <div><span>Access Door</span><h3>Teknisi Access Control</h3><p>Pemasangan access control untuk area terbatas.</p></div>
+                    </article>
+                    <article class="portfolio-card">
+                        <img src="https://alfindotech.biz.id/image/portfolio/project_4.webp" alt="Teknisi Security Alarm" loading="lazy">
+                        <div><span>Security Alarm</span><h3>Teknisi Security Alarm</h3><p>Pemasangan sensor beam dan panel alarm.</p></div>
+                    </article>
+                    <article class="portfolio-card">
+                        <img src="https://alfindotech.biz.id/image/portfolio/project_5.webp" alt="Palang Parkir" loading="lazy">
+                        <div><span>Automation</span><h3>Palang Parkir</h3><p>Penerapan sistem palang parkir untuk perumahan.</p></div>
+                    </article>
+                    <article class="portfolio-card">
+                        <img src="https://alfindotech.biz.id/image/portfolio/project_6.webp" alt="Maintenance SPBU" loading="lazy">
+                        <div><span>Maintenance</span><h3>Maintenance SPBU</h3><p>Pemeliharaan sistem CCTV di area SPBU Pertamina.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-cta">
+            <div class="container">
+                <div class="cta-band">
+                    <div>
+                        <span>Butuh survey lokasi?</span>
+                        <h2>Kirim kebutuhan Anda, tim kami bantu pilih paket yang tepat.</h2>
+                    </div>
+                    <a class="btn btn-light btn-lg" href="./contact.html">Hubungi Kami</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span>Testimoni Pelanggan</span>
+                    <h2>Pernyataan mereka tentang layanan kami</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>Layanan pemasangan CCTV sangat profesional, pengerjaannya rapi, dan sistem berfungsi optimal. Tim memberikan penjelasan yang mudah dipahami.</p>
+                            <div class="testimonial-person"><img src="https://alfindotech.biz.id/image/site/testimonial_1.webp" alt="Bu Dita Wibowo"><div><strong>Bu Dita Wibowo</strong><span>Kepala Bagian Umum</span></div></div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>Pemasangan kontrol akses berjalan lancar dan hasilnya memuaskan. Sistem terasa aman dan mudah digunakan setiap hari.</p>
+                            <div class="testimonial-person"><img src="https://alfindotech.biz.id/image/site/testimonial_2.webp" alt="Pak Heru Santoso"><div><strong>Pak Heru Santoso</strong><span>Kepala Pengadaan</span></div></div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <article class="testimonial-card">
+                            <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                            <p>Konsultasi sangat membantu menentukan sistem keamanan yang tepat. Proses instalasinya cepat, rapi, dan profesional.</p>
+                            <div class="testimonial-person"><img src="https://alfindotech.biz.id/image/site/testimonial_3.webp" alt="Pak Ahmadin"><div><strong>Pak Ahmadin</strong><span>Manajer Teknik</span></div></div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-muted">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-lg-7">
+                        <div class="contact-panel">
+                            <div class="section-heading">
+                                <span>Hubungi Kami</span>
+                                <h2>Silakan kirim kebutuhan Anda</h2>
+                            </div>
+                            <p>Form ini dummy untuk GitHub Pages. Data tidak masuk database, hanya menampilkan simulasi pengiriman.</p>
+                            <form id="dummyForm" class="row g-3">
+                                <div class="col-md-6"><label>Nama</label><input class="form-control" required></div>
+                                <div class="col-md-6"><label>Email</label><input class="form-control" type="email" required></div>
+                                <div class="col-md-6"><label>Phone/WhatsApp</label><input class="form-control" required></div>
+                                <div class="col-md-6"><label>Subjek</label><input class="form-control" required></div>
+                                <div class="col-12"><label>Pesan</label><textarea class="form-control" rows="6" required></textarea></div>
+                                <div class="col-12"><button class="btn btn-primary btn-lg w-100" type="submit" data-track="contact_submit">Kirim Pesan Dummy</button></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="contact-info">
+                            <div><i class="fa-solid fa-location-dot"></i><span>Kantor Depok</span><strong>Jl. Tole Iskandar No.9, Kota Depok</strong></div>
+                            <div><i class="fa-solid fa-location-dot"></i><span>Kantor Tangerang</span><strong>Jl. Kartika VII No.9, Kota Tangerang</strong></div>
+                            <div><i class="fa-solid fa-envelope"></i><span>Email</span><strong>info@alfindotech.biz.id<br>alfindotech@gmail.com</strong></div>
+                            <div><i class="fa-solid fa-phone"></i><span>Telepon</span><strong>(+62) 821-1869-0455</strong></div>
+                            <a class="btn btn-danger w-100" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20ingin%20konsultasi%20sistem%20keamanan." target="_blank" rel="noopener" data-track="contact_whatsapp">Chat WhatsApp</a>
+                        </div>
+                        <iframe class="map-frame mt-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126881.52584774737!2d106.8177975!3d-6.38784855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ec0828bcde9f%3A0x301576d150524f0!2sDepok%2C%20Kota%20Depok%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1768386148649!5m2!1sid!2sid" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="brand-mark brand-mark-light mb-3">
+                        <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                        <span>Alfindo<span>Tech</span></span>
+                    </div>
+                    <p class="footer-copy">Solusi keamanan terintegrasi untuk rumah, kantor, retail, gudang, sekolah, dan area publik.</p>
+                    <div class="d-flex gap-2">
+                        <a class="social-btn" href="https://www.facebook.com/alfindotech0455" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="social-btn" href="https://www.instagram.com/alfindotech" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="social-btn" href="https://www.tiktok.com/@alfindotech55" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a class="social-btn" href="https://x.com/AlfindoTech_" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <h3>Menu</h3>
+                    <a href="#home">Beranda</a>
+                    <a href="./about.html">Tentang Kami</a>
+                    <a href="./portfolio.html">Portofolio</a>
+                    <a href="./contact.html">Kontak Kami</a>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h3>Layanan</h3>
+                    <a href="./service-cctv.html">CCTV</a>
+                    <a href="./service-access-door.html">Access Door</a>
+                    <a href="./service-security-alarm.html">Security Alarm</a>
+                    <a href="./service-maintenance.html">Maintenance</a>
+                </div>
+                <div class="col-lg-3">
+                    <h3>Kontak</h3>
+                    <p class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Jl. Tole Iskandar No.9, Kota Depok</p>
+                    <p class="mb-2"><i class="fa-solid fa-location-dot me-2"></i>Jl. Kartika VII No.9, Kota Tangerang</p>
+                    <a href="mailto:info@alfindotech.biz.id">info@alfindotech.biz.id</a>
+                    <a href="tel:+6282118690455">(+62) 821-1869-0455</a>
+                </div>
+            </div>
+            <form class="newsletter mt-5" id="newsletterForm">
+                <input type="email" placeholder="Email Anda" required>
+                <button class="btn btn-primary" type="submit">Daftar Update</button>
+            </form>
+            <div class="footer-bottom">
+                <span>&copy; 2026 AlfindoTech. Seluruh hak cipta dilindungi.</span>
+                <span>Dummy GitHub Pages, tanpa PHP dan MySQL.</span>
+            </div>
+        </section>
+    </footer>
+
+    <a class="wa-float" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20AlfindoTech." target="_blank" rel="noopener" data-track="whatsapp_click" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <button class="back-top" type="button" aria-label="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
