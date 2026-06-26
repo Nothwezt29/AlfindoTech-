@@ -51,7 +51,6 @@
 
     function renderDashboard() {
         const stats = document.getElementById('adminStats');
-        if (!stats) return;
 
         const data = getData();
         const statItems = [
@@ -66,14 +65,18 @@
             ['Tracking', data.tracking, 'fa-chart-line', 'red']
         ];
 
-        stats.innerHTML = statItems.map(([label, value, icon, tone]) => `
+        if (stats) {
+            stats.innerHTML = statItems.map(([label, value, icon, tone]) => `
             <div class="admin-stat admin-stat-${tone}">
                 <i class="fa-solid ${icon}"></i>
                 <div><span>${label}</span><strong>${value}</strong></div>
             </div>
-        `).join('');
+            `).join('');
+        }
 
-        document.getElementById('leadRows').innerHTML = data.leads.map((lead, index) => `
+        const leadRows = document.getElementById('leadRows');
+        if (leadRows) {
+            leadRows.innerHTML = data.leads.map((lead, index) => `
             <tr>
                 <td><strong>${lead.name}</strong><br><span class="text-muted">Demo lead</span></td>
                 <td>${lead.contact}<br><span class="text-muted">dummy@demo.local</span></td>
@@ -81,18 +84,27 @@
                 <td><span class="badge rounded-pill text-bg-primary">${lead.status}</span></td>
                 <td><button class="btn btn-sm btn-outline-danger" type="button" data-delete-lead="${index}">Hapus</button></td>
             </tr>
-        `).join('');
+            `).join('');
+        }
 
-        document.getElementById('serviceList').innerHTML = textList('Layanan', data.services);
-        document.getElementById('productList').innerHTML = textList('Produk', data.products);
-        document.getElementById('packageList').innerHTML = textList('Paket', data.packages);
-        document.getElementById('faqList').innerHTML = textList('FAQ', data.faqs);
-        document.getElementById('portfolioList').innerHTML = textList('Portfolio', data.portfolio);
+        const serviceList = document.getElementById('serviceList');
+        const productList = document.getElementById('productList');
+        const packageList = document.getElementById('packageList');
+        const faqList = document.getElementById('faqList');
+        const portfolioList = document.getElementById('portfolioList');
+
+        if (serviceList) serviceList.innerHTML = textList('Layanan', data.services);
+        if (productList) productList.innerHTML = textList('Produk', data.products);
+        if (packageList) packageList.innerHTML = textList('Paket', data.packages);
+        if (faqList) faqList.innerHTML = textList('FAQ', data.faqs);
+        if (portfolioList) portfolioList.innerHTML = textList('Portfolio', data.portfolio);
 
         const form = document.getElementById('settingForm');
-        form.company_name.value = data.settings.company_name;
-        form.whatsapp.value = data.settings.whatsapp;
-        form.hero_title.value = data.settings.hero_title;
+        if (form) {
+            form.company_name.value = data.settings.company_name;
+            form.whatsapp.value = data.settings.whatsapp;
+            form.hero_title.value = data.settings.hero_title;
+        }
     }
 
     document.getElementById('adminLoginForm')?.addEventListener('submit', function (event) {
