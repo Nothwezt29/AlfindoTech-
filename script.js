@@ -33,6 +33,26 @@
         event.currentTarget.reset();
     });
 
+    const productFilters = document.querySelectorAll('[data-product-filter]');
+    const productCards = document.querySelectorAll('[data-product-category]');
+
+    if (productFilters.length && productCards.length) {
+        productFilters.forEach(function (filter) {
+            filter.addEventListener('click', function () {
+                const selected = filter.dataset.productFilter;
+
+                productFilters.forEach(function (item) {
+                    item.classList.toggle('active', item === filter);
+                });
+
+                productCards.forEach(function (card) {
+                    const isVisible = selected === 'all' || card.dataset.productCategory === selected;
+                    card.hidden = !isVisible;
+                });
+            });
+        });
+    }
+
     const backTop = document.querySelector('.back-top');
     if (backTop) {
         window.addEventListener('scroll', function () {

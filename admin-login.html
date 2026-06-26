@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Admin Demo | AlfindoTech</title>
+    <meta name="description" content="Dummy login admin AlfindoTech untuk demo GitHub Pages.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="admin-login">
+    <main class="login-shell">
+        <section class="login-copy">
+            <div class="brand-mark brand-mark-light">
+                <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                <span>AlfindoTech</span>
+            </div>
+            <div>
+                <span class="login-eyebrow">Static Admin Demo</span>
+                <h1>Preview dashboard admin untuk company profile.</h1>
+                <p>Demo ini berjalan di GitHub Pages dengan HTML, CSS, JavaScript, dan localStorage.</p>
+            </div>
+            <div class="login-metrics">
+                <div><strong>0</strong><span>Database server</span></div>
+                <div><strong>8</strong><span>Menu dummy</span></div>
+                <div><strong>100%</strong><span>Static demo</span></div>
+            </div>
+        </section>
+
+        <section class="login-panel">
+            <div class="login-panel-head">
+                <div class="brand-mark">
+                    <span class="brand-icon"><i class="fa-solid fa-lock"></i></span>
+                    <span>Admin Demo</span>
+                </div>
+                <a href="./index.html" class="login-back" aria-label="Lihat website"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+            <div>
+                <h2>Masuk Demo</h2>
+                <p>Gunakan credential demo. Tidak ada auth server di GitHub Pages.</p>
+            </div>
+            <form id="adminLoginForm" class="mt-4">
+                <div class="alert alert-danger d-none" id="adminLoginError">Email atau password demo tidak sesuai.</div>
+                <label>Email</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input class="form-control" type="email" name="email" value="admin@demo.com" required autofocus>
+                </div>
+                <label class="mt-3">Password</label>
+                <div class="input-icon">
+                    <i class="fa-solid fa-key"></i>
+                    <input class="form-control" type="password" name="password" value="demo123" required>
+                </div>
+                <div class="login-options">
+                    <label class="form-check">
+                        <input class="form-check-input" type="checkbox" checked>
+                        <span class="form-check-label">Mode demo</span>
+                    </label>
+                    <span>localStorage</span>
+                </div>
+                <button class="btn btn-primary w-100 mt-4" type="submit"><i class="fa-solid fa-right-to-bracket me-2"></i>Masuk Dashboard</button>
+            </form>
+            <div class="login-hint">Demo: admin@demo.com / demo123</div>
+        </section>
+    </main>
+
+    <script src="./admin-demo.js"></script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard Admin Demo | AlfindoTech</title>
+    <meta name="description" content="Dummy dashboard admin AlfindoTech untuk GitHub Pages.">
+    <script>
+        (function () {
+            if (localStorage.getItem('alfAdminDemoAuth') !== 'true') {
+                location.href = './admin-login.html';
+                return;
+            }
+
+            var compact = window.matchMedia('(max-width: 991.98px)').matches;
+            var key = compact ? 'alfAdminDemoSidebarMobile' : 'alfAdminDemoSidebarDesktop';
+            var state = localStorage.getItem(key) || (compact ? 'collapsed' : 'expanded');
+            document.documentElement.classList.add('admin-sidebar-' + state);
+        })();
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-head">
+                <a class="brand-mark" href="./admin-dashboard.html">
+                    <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span>AdminTech</span>
+                </a>
+                <button class="admin-nav-toggle" type="button" data-admin-sidebar-toggle aria-label="Buka tutup navbar admin" aria-expanded="true">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <nav class="admin-menu">
+                <a class="active" href="#dashboard"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+                <a href="#services"><i class="fa-solid fa-screwdriver-wrench"></i><span>Layanan</span></a>
+                <a href="#productList"><i class="fa-solid fa-box-open"></i><span>Produk</span></a>
+                <a href="#packages"><i class="fa-solid fa-tags"></i><span>Paket</span></a>
+                <a href="#portfolio"><i class="fa-solid fa-images"></i><span>Portfolio</span></a>
+                <a href="#testimonials"><i class="fa-solid fa-star"></i><span>Testimoni</span></a>
+                <a href="#faqs"><i class="fa-solid fa-circle-question"></i><span>FAQ</span></a>
+                <a href="#leads"><i class="fa-solid fa-inbox"></i><span>Leads</span></a>
+                <a href="#settings"><i class="fa-solid fa-gear"></i><span>Setting</span></a>
+            </nav>
+            <div class="admin-sidebar-actions">
+                <a class="admin-action-link" href="./index.html" target="_blank"><i class="fa-solid fa-up-right-from-square"></i><span>Lihat Web</span></a>
+                <button class="admin-action-link admin-action-danger" type="button" data-admin-logout><i class="fa-solid fa-right-from-bracket"></i><span>Logout</span></button>
+            </div>
+        </aside>
+
+        <main class="admin-main" id="dashboard">
+            <header class="admin-topbar">
+                <div>
+                    <span class="admin-kicker">AlfindoTech Static CMS</span>
+                    <h1>Dashboard Demo</h1>
+                </div>
+            </header>
+
+            <section class="dashboard-hero">
+                <div>
+                    <span>Ringkasan Demo</span>
+                    <h2>Admin dummy untuk preview GitHub Pages.</h2>
+                    <p>Data demo disimpan di browser memakai localStorage, bukan database server.</p>
+                </div>
+                <button class="btn btn-light" type="button" data-reset-demo><i class="fa-solid fa-rotate-right me-2"></i>Reset Demo</button>
+            </section>
+
+            <div class="admin-stat-grid" id="adminStats"></div>
+
+            <div class="dashboard-grid mt-4">
+                <section class="admin-panel" id="leads">
+                    <div class="admin-panel-head">
+                        <div>
+                            <h2>Lead Terbaru</h2>
+                            <p>Data dummy dari localStorage.</p>
+                        </div>
+                        <button class="btn btn-sm btn-primary" type="button" data-add-lead>Tambah Lead</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table align-middle admin-table">
+                            <thead><tr><th>Nama</th><th>Kontak</th><th>Subjek</th><th>Status</th><th></th></tr></thead>
+                            <tbody id="leadRows"></tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <aside class="admin-panel quick-panel">
+                    <div class="admin-panel-head">
+                        <div>
+                            <h2>Aksi Cepat</h2>
+                            <p>Simulasi perubahan data.</p>
+                        </div>
+                    </div>
+                    <div class="quick-actions">
+                        <button type="button" data-add-product><i class="fa-solid fa-box-open"></i><span><strong>Tambah Produk</strong><small>Produk dummy baru</small></span></button>
+                        <button type="button" data-add-package><i class="fa-solid fa-tag"></i><span><strong>Tambah Paket</strong><small>Paket dummy baru</small></span></button>
+                        <button type="button" data-add-faq><i class="fa-solid fa-circle-question"></i><span><strong>Tambah FAQ</strong><small>Pertanyaan dummy</small></span></button>
+                        <button type="button" data-add-portfolio><i class="fa-solid fa-image"></i><span><strong>Tambah Portfolio</strong><small>Project dummy</small></span></button>
+                        <button type="button" data-reset-demo><i class="fa-solid fa-rotate-right"></i><span><strong>Reset Data</strong><small>Kembali ke data awal</small></span></button>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="admin-panel mt-4" id="services">
+                <div class="admin-panel-head">
+                    <div><h2>Konten Demo</h2><p>Layanan, produk, paket, FAQ, portfolio, dan setting versi static.</p></div>
+                </div>
+                <div class="admin-content-grid">
+                    <article id="serviceList"></article>
+                    <article id="productList"></article>
+                    <article id="packageList"></article>
+                    <article id="faqList"></article>
+                    <article id="portfolioList"></article>
+                </div>
+            </section>
+
+            <section class="admin-panel mt-4" id="settings">
+                <div class="admin-panel-head">
+                    <div><h2>Setting Demo</h2><p>Perubahan hanya disimpan di browser ini.</p></div>
+                </div>
+                <form class="admin-form" id="settingForm">
+                    <div class="row g-3">
+                        <div class="col-md-6"><label>Nama Perusahaan</label><input class="form-control" name="company_name"></div>
+                        <div class="col-md-6"><label>WhatsApp</label><input class="form-control" name="whatsapp"></div>
+                        <div class="col-12"><label>Hero Title</label><textarea class="form-control" rows="3" name="hero_title"></textarea></div>
+                    </div>
+                    <div class="admin-actions">
+                        <button class="btn btn-primary" type="submit">Simpan Demo</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="./admin-demo.js"></script>
+</body>
+</html>
