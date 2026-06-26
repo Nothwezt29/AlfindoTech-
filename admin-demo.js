@@ -178,5 +178,12 @@
         renderDashboard();
     });
 
+    document.querySelectorAll('[data-admin-dummy-form]').forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            alert('Data dummy tersimpan di browser preview. Di versi Laravel, data ini masuk database.');
+        });
+    });
+
     renderDashboard();
 })();
