@@ -30,22 +30,23 @@
                     <li class="nav-item"><a class="nav-link" href="./index.html">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="./about.html">Tentang</a></li>
                     <li class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Produk</button>
-                        <ul class="dropdown-menu border-0 shadow-sm">
-                            <li><a class="dropdown-item" href="./products.html?category=cctv-camera">CCTV Camera</a></li>
-                            <li><a class="dropdown-item" href="./products.html?category=recorder">Recorder</a></li>
-                            <li><a class="dropdown-item" href="./products.html?category=access-control">Access Control</a></li>
-                            <li><a class="dropdown-item" href="./products.html?category=security-alarm">Security Alarm</a></li>
-                            <li><a class="dropdown-item" href="./products.html?category=network-power">Network & Power</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <button class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</button>
+                        <button class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Layanan</button>
                         <ul class="dropdown-menu border-0 shadow-sm">
                             <li><a class="dropdown-item" href="./service-cctv.html">CCTV</a></li>
                             <li><a class="dropdown-item" href="./service-access-door.html">Access Door</a></li>
                             <li><a class="dropdown-item" href="./service-security-alarm.html">Security Alarm</a></li>
                             <li><a class="dropdown-item" href="./service-maintenance.html">Maintenance</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <button class="dropdown-item dropdown-toggle" type="button">Produk</button>
+                                <ul class="dropdown-menu border-0 shadow-sm">
+                                    <li><a class="dropdown-item" href="./products.html">Semua</a></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="./products.html?category=cctv-camera&kind=package">Paket CCTV</a><ul class="dropdown-menu border-0 shadow-sm"><li><a class="dropdown-item" href="./products.html?category=cctv-camera&kind=package&brand=Hikvision">Hikvision</a></li><li><a class="dropdown-item" href="./products.html?category=cctv-camera&kind=package&brand=Dahua">Dahua</a></li><li><a class="dropdown-item" href="./products.html?category=cctv-camera&kind=package&brand=TP-Link">TP-Link</a></li></ul></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="./products.html?category=access-control&kind=single">Access Door</a><ul class="dropdown-menu border-0 shadow-sm"><li><a class="dropdown-item" href="./products.html?category=access-control&kind=single&brand=Solution">Solution</a></li><li><a class="dropdown-item" href="./products.html?category=access-control&kind=single&brand=ZKTeco">ZKTeco</a></li></ul></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="./products.html?category=security-alarm&kind=single">Security Alarm</a><ul class="dropdown-menu border-0 shadow-sm"><li><a class="dropdown-item" href="./products.html?category=security-alarm&kind=single&brand=Paradox">Paradox</a></li></ul></li>
+                                    <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="./products.html?category=network-power&kind=single">Lain-Lain</a><ul class="dropdown-menu border-0 shadow-sm"><li><a class="dropdown-item" href="./products.html?category=network-power&kind=single&brand=Ruijie">Ruijie</a></li><li><a class="dropdown-item" href="./products.html?category=network-power&kind=single&brand=TP-Link">TP-Link</a></li></ul></li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="./portfolio.html">Portofolio</a></li>
@@ -86,8 +87,15 @@
                     <button type="button" data-product-filter="network-power">Network & Power</button>
                 </div>
 
+                <div class="product-filter product-filter-kind">
+                    <button class="active" type="button" data-kind-filter="all">Semua Jenis</button>
+                    <button type="button" data-kind-filter="package">Paket Instalasi</button>
+                    <button type="button" data-kind-filter="single">Produk Satuan</button>
+                    <button type="button" data-kind-filter="service">Jasa / Lain-lain</button>
+                </div>
+
                 <div class="product-grid">
-                    <article class="product-card" data-product-category="all">
+                    <article class="product-card product-card-package" data-product-category="all" data-product-kind="package" data-product-brand="Nothwezt">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Mesin%20Antrian%20Touchscreen." class="product-media" target="_blank" rel="noopener">
                             <img src="./mesin-antrian-touchscreen-1782446253.png" alt="Mesin Antrian Touchscreen" loading="lazy">
                         </a>
@@ -100,7 +108,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-product-category="cctv-camera" style="--product-border: #d0290b;">
+                    <article class="product-card product-card-package" data-product-kind="package" data-product-brand="Hikvision" data-product-category="cctv-camera" style="--product-border: #d0290b;">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20CCTV%20Outdoor%202MP%20Full%20Color." class="product-media" target="_blank" rel="noopener">
                             <img src="https://alfindotech.biz.id/image/portfolio/project_1.webp" alt="CCTV Outdoor 2MP Full Color" loading="lazy">
                         </a>
@@ -113,7 +121,33 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-product-category="cctv-camera">
+                    <article class="product-card product-card-package" data-product-kind="package" data-product-brand="Dahua" data-product-category="cctv-camera" style="--product-border: #1687c9;">
+                        <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20paket%20CCTV%20Dahua%204%20Channel." class="product-media" target="_blank" rel="noopener">
+                            <img src="https://alfindotech.biz.id/image/portfolio/project_2.webp" alt="Paket CCTV Dahua 4 Channel" loading="lazy">
+                        </a>
+                        <div class="product-body">
+                            <div class="product-title-block"><span>Dahua</span><h3>Paket CCTV Dahua 4 Channel</h3><p>Paket IP camera dome untuk rumah, kantor kecil, dan area retail.</p></div>
+                            <div class="product-price-pill">Mulai Rp 4,8 jutaan</div>
+                            <div class="product-includes"><strong>Includes:</strong><ul><li>4 kamera IP dome</li><li>NVR 4 channel</li><li>Kabel dan konektor</li><li>Instalasi rapi</li></ul></div>
+                            <div class="product-meta"><small>Dahua Basic IP</small></div>
+                            <div class="product-actions"><a class="btn btn-outline-primary" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20mohon%20detail%20Paket%20CCTV%20Dahua%204%20Channel." target="_blank" rel="noopener">Detail</a><a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20CCTV%20Dahua%204%20Channel." target="_blank" rel="noopener">Order Now</a></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card product-card-package" data-product-kind="package" data-product-brand="TP-Link" data-product-category="cctv-camera" style="--product-border: #10a6b8;">
+                        <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20paket%20CCTV%20TP-Link%20Tapo." class="product-media" target="_blank" rel="noopener">
+                            <img src="https://alfindotech.biz.id/image/portfolio/project_1.webp" alt="Paket CCTV TP-Link Tapo" loading="lazy">
+                        </a>
+                        <div class="product-body">
+                            <div class="product-title-block"><span>TP-Link</span><h3>Paket CCTV TP-Link Tapo</h3><p>Paket kamera wireless untuk kebutuhan pantau rumah dan toko.</p></div>
+                            <div class="product-price-pill">Mulai Rp 2 jutaan</div>
+                            <div class="product-includes"><strong>Includes:</strong><ul><li>2 kamera WiFi</li><li>MicroSD opsional</li><li>Setup aplikasi</li><li>Panduan penggunaan</li></ul></div>
+                            <div class="product-meta"><small>Tapo Wireless</small></div>
+                            <div class="product-actions"><a class="btn btn-outline-primary" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20mohon%20detail%20Paket%20CCTV%20TP-Link%20Tapo." target="_blank" rel="noopener">Detail</a><a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20Paket%20CCTV%20TP-Link%20Tapo." target="_blank" rel="noopener">Order Now</a></div>
+                        </div>
+                    </article>
+
+                    <article class="product-card" data-product-kind="single" data-product-brand="Dahua" data-product-category="cctv-camera">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20IP%20Camera%20Dome%204MP." class="product-media" target="_blank" rel="noopener">
                             <img src="https://alfindotech.biz.id/image/portfolio/project_2.webp" alt="IP Camera Dome 4MP" loading="lazy">
                         </a>
@@ -126,7 +160,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-product-category="recorder">
+                    <article class="product-card" data-product-kind="single" data-product-brand="Hikvision" data-product-category="recorder">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20NVR%208%20Channel%20PoE." class="product-media" target="_blank" rel="noopener">
                             <img src="https://alfindotech.biz.id/image/carousel/carousel_1.webp" alt="NVR 8 Channel PoE" loading="lazy">
                         </a>
@@ -139,7 +173,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-product-category="access-control">
+                    <article class="product-card" data-product-kind="single" data-product-brand="Solution" data-product-category="access-control">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Access%20Door%20Fingerprint." class="product-media" target="_blank" rel="noopener">
                             <img src="https://alfindotech.biz.id/image/portfolio/project_3.webp" alt="Access Door Fingerprint" loading="lazy">
                         </a>
@@ -152,7 +186,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-product-category="security-alarm">
+                    <article class="product-card" data-product-kind="single" data-product-brand="Paradox" data-product-category="security-alarm">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Panel%20Alarm%20Wireless." class="product-media" target="_blank" rel="noopener">
                             <img src="https://alfindotech.biz.id/image/portfolio/project_4.webp" alt="Panel Alarm Wireless" loading="lazy">
                         </a>
@@ -165,7 +199,7 @@
                         </div>
                     </article>
 
-                    <article class="product-card" data-product-category="network-power">
+                    <article class="product-card" data-product-kind="single" data-product-brand="Ruijie" data-product-category="network-power">
                         <a href="https://api.whatsapp.com/send?phone=6282118690455&text=Halo%2C%20saya%20tertarik%20dengan%20produk%20Switch%20PoE%208%20Port." class="product-media" target="_blank" rel="noopener">
                             <img src="https://alfindotech.biz.id/image/portfolio/project_5.webp" alt="Switch PoE 8 Port" loading="lazy">
                         </a>
@@ -178,6 +212,7 @@
                         </div>
                     </article>
                 </div>
+                <div class="product-pagination" id="productPagination" aria-label="Pagination produk"></div>
             </div>
         </section>
     </main>

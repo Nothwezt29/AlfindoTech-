@@ -5,6 +5,7 @@
     const seed = {
         services: ['CCTV', 'Access Door', 'Security Alarm', 'Maintenance'],
         products: ['IP Camera 2MP Full Color', 'Dome Camera 4MP', 'NVR 8 Channel', 'Face Recognition Access', 'Alarm Sensor Pintu', 'PoE Switch 8 Port'],
+        brands: ['Hikvision', 'Dahua', 'TP-Link', 'Solution', 'ZKTeco', 'Paradox', 'Ruijie'],
         packages: ['Paket CCTV Rumah', 'Paket CCTV Bisnis', 'Paket Access Door', 'Paket Maintenance'],
         faqs: ['Apakah bisa survey lokasi dulu?', 'Apakah CCTV bisa dipantau dari HP?', 'Berapa lama proses pemasangan?', 'Apakah tersedia garansi?'],
         portfolio: ['CCTV Project', 'Teknisi CCTV', 'Access Control', 'Security Alarm', 'Maintenance SPBU', 'Palang Parkir'],
@@ -47,6 +48,25 @@
 
     function textList(title, items) {
         return `<h3>${title}</h3><ul>${items.map((item) => `<li>${item}</li>`).join('')}</ul>`;
+    }
+
+    function renderProductBrands() {
+        const brandSelect = document.querySelector('[data-brand-select]');
+        const brandChips = document.getElementById('brandChips');
+        if (!brandSelect && !brandChips) return;
+
+        const data = getData();
+        const brands = [...new Set((data.brands || seed.brands).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+
+        if (brandSelect) {
+            const selected = brandSelect.value || brands[0] || '';
+            brandSelect.innerHTML = brands.map((brand) => `<option value="${brand}">${brand}</option>`).join('');
+            if (brands.includes(selected)) brandSelect.value = selected;
+        }
+
+        if (brandChips) {
+            brandChips.innerHTML = brands.map((brand) => `<span class="badge rounded-pill text-bg-light border px-3 py-2">${brand}</span>`).join('');
+        }
     }
 
     function renderDashboard() {
@@ -105,6 +125,8 @@
             form.whatsapp.value = data.settings.whatsapp;
             form.hero_title.value = data.settings.hero_title;
         }
+
+        renderProductBrands();
     }
 
     document.getElementById('adminLoginForm')?.addEventListener('submit', function (event) {
@@ -154,6 +176,23 @@
             renderDashboard();
         }
 
+        if (event.target.closest('[data-add-brand]')) {
+            const input = document.getElementById('productBrandNew');
+            const value = (input?.value || '').trim();
+            if (!value) return;
+
+            data.brands = data.brands || clone(seed.brands);
+            if (!data.brands.some((brand) => brand.toLowerCase() === value.toLowerCase())) {
+                data.brands.push(value);
+                setData(data);
+            }
+
+            if (input) input.value = '';
+            renderProductBrands();
+            const select = document.querySelector('[data-brand-select]');
+            if (select) select.value = value;
+        }
+
         if (event.target.closest('[data-add-faq]')) {
             data.faqs.push('FAQ demo baru ' + (data.faqs.length + 1) + '?');
             setData(data);
@@ -193,7 +232,8 @@
     document.querySelectorAll('[data-admin-dummy-form]').forEach(function (form) {
         form.addEventListener('submit', function (event) {
             event.preventDefault();
-            alert('Data dummy tersimpan di browser preview. Di versi Laravel, data ini masuk database.');
+            const selectedBrand = event.currentTarget.brand?.value || 'tanpa merk';
+            alert('Produk dummy tersimpan dengan merk: ' + selectedBrand + '. Di versi Laravel, data ini masuk database.');
         });
     });
 
