@@ -41,11 +41,11 @@
                 <div class="admin-panel-head"><div><h2>Data Produk</h2><p>Preview produk yang tampil di halaman katalog dummy.</p></div><button class="btn btn-primary" type="button">Tambah Produk</button></div>
                 <div class="table-responsive">
                     <table class="table align-middle admin-table">
-                        <thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Aktif</th><th></th></tr></thead>
+                        <thead><tr><th>Produk</th><th>Kategori</th><th>Harga</th><th>Bingkai</th><th>Aktif</th><th></th></tr></thead>
                         <tbody>
-                            <tr><td><strong>IP Camera 2MP Full Color</strong><br><span class="text-muted">2MP IP</span></td><td>CCTV Camera</td><td>Hubungi kami</td><td>Ya</td><td><button class="btn btn-sm btn-outline-primary">Edit</button></td></tr>
-                            <tr><td><strong>NVR 8 Channel</strong><br><span class="text-muted">8 Channel</span></td><td>Recorder</td><td>Hubungi kami</td><td>Ya</td><td><button class="btn btn-sm btn-outline-primary">Edit</button></td></tr>
-                            <tr><td><strong>Face Recognition Access</strong><br><span class="text-muted">Face/PIN/Card</span></td><td>Access Control</td><td>Hubungi kami</td><td>Ya</td><td><button class="btn btn-sm btn-outline-primary">Edit</button></td></tr>
+                            <tr><td><strong>IP Camera 2MP Full Color</strong><br><span class="text-muted">2MP IP</span></td><td>CCTV Camera</td><td>Hubungi kami</td><td><span class="color-swatch" style="background:#0b63ce"></span> #0b63ce</td><td>Ya</td><td><button class="btn btn-sm btn-outline-primary">Edit</button></td></tr>
+                            <tr><td><strong>NVR 8 Channel</strong><br><span class="text-muted">8 Channel</span></td><td>Recorder</td><td>Hubungi kami</td><td><span class="color-swatch" style="background:#e63946"></span> #e63946</td><td>Ya</td><td><button class="btn btn-sm btn-outline-primary">Edit</button></td></tr>
+                            <tr><td><strong>Face Recognition Access</strong><br><span class="text-muted">Face/PIN/Card</span></td><td>Access Control</td><td>Hubungi kami</td><td><span class="color-swatch" style="background:#08a398"></span> #08a398</td><td>Ya</td><td><button class="btn btn-sm btn-outline-primary">Edit</button></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -56,11 +56,13 @@
                     <div class="row g-3">
                         <div class="col-md-5"><label>Nama Produk</label><input class="form-control" value="IP Camera 2MP Full Color"></div>
                         <div class="col-md-4"><label>Kategori</label><select class="form-select"><option>CCTV Camera</option><option>Recorder</option><option>Access Control</option></select></div>
-                        <div class="col-md-3"><label>Harga / Label</label><input class="form-control" value="Hubungi kami"></div>
+                        <div class="col-md-2"><label>Harga / Label</label><input class="form-control" value="Hubungi kami"></div>
+                        <div class="col-md-1"><label>Warna Bingkai</label><input class="form-control form-control-color" type="color" value="#0b63ce"></div>
                         <div class="col-md-4"><label>Brand</label><input class="form-control" placeholder="Hikvision / Dahua"></div>
                         <div class="col-md-4"><label>Model</label><input class="form-control" placeholder="Model produk"></div>
                         <div class="col-md-4"><label>Upload Gambar Lokal</label><input class="form-control" type="file"></div>
-                        <div class="col-12"><label>URL Gambar Produk</label><input class="form-control" value="https://alfindotech.biz.id/image/carousel/carousel_1.webp"></div>
+                        <div class="col-md-6"><label>URL Gambar Produk</label><input class="form-control" value="https://alfindotech.biz.id/image/carousel/carousel_1.webp"></div>
+                        <div class="col-md-6"><label>Background Produk</label><input class="form-control" value="./image/site/kayu.jpeg"></div>
                         <div class="col-12"><label>Ringkasan</label><input class="form-control" value="Kamera indoor/outdoor dengan tampilan warna lebih jelas."></div>
                         <div class="col-12"><label>Deskripsi</label><textarea class="form-control" rows="5">Konten dummy produk untuk preview.</textarea></div>
                         <div class="col-12"><label>Spesifikasi</label><textarea class="form-control" rows="4">Resolusi: 2MP&#10;Mode: Full Color&#10;Area: Indoor/Outdoor</textarea></div>
