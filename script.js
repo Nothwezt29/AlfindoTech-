@@ -37,20 +37,25 @@
     const productCards = document.querySelectorAll('[data-product-category]');
 
     if (productFilters.length && productCards.length) {
+        function applyProductFilter(selected) {
+            productFilters.forEach(function (item) {
+                item.classList.toggle('active', item.dataset.productFilter === selected);
+            });
+
+            productCards.forEach(function (card) {
+                const isVisible = selected === 'all' || card.dataset.productCategory === selected;
+                card.hidden = !isVisible;
+            });
+        }
+
         productFilters.forEach(function (filter) {
             filter.addEventListener('click', function () {
-                const selected = filter.dataset.productFilter;
-
-                productFilters.forEach(function (item) {
-                    item.classList.toggle('active', item === filter);
-                });
-
-                productCards.forEach(function (card) {
-                    const isVisible = selected === 'all' || card.dataset.productCategory === selected;
-                    card.hidden = !isVisible;
-                });
+                applyProductFilter(filter.dataset.productFilter);
             });
         });
+
+        const selectedCategory = new URLSearchParams(window.location.search).get('category') || 'all';
+        applyProductFilter(selectedCategory);
     }
 
     const backTop = document.querySelector('.back-top');

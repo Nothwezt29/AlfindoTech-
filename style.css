@@ -430,7 +430,7 @@ a {
     border-radius: 20px;
     background:
         linear-gradient(rgba(255, 255, 255, .16), rgba(255, 255, 255, .22)),
-        image-set(url('./image/site/kayu.webp') type('image/webp'), url('./image/site/kayu.jpeg') type('image/jpeg'));
+        image-set(url('./kayu.webp') type('image/webp'), url('./kayu.jpeg') type('image/jpeg'));
     background-size: cover;
     background-position: center;
     box-shadow:
@@ -492,11 +492,17 @@ a {
     border-radius: 0 0 16px 16px;
     background:
         linear-gradient(rgba(255, 255, 255, .18), rgba(255, 255, 255, .24)),
-        image-set(url('./image/site/kayu.webp') type('image/webp'), url('./image/site/kayu.jpeg') type('image/jpeg'));
+        image-set(url('./kayu.webp') type('image/webp'), url('./kayu.jpeg') type('image/jpeg'));
     background-size: cover;
     background-position: center;
 }
 
+.product-title-block {
+    position: relative;
+    z-index: 1;
+}
+
+.product-title-block > span,
 .product-body > span {
     color: var(--teal);
     font-size: .75rem;
@@ -504,15 +510,46 @@ a {
     text-transform: uppercase;
 }
 
+.product-title-block h3,
 .product-body h3 {
     margin: 8px 0;
     font-size: 1.1rem;
     font-weight: 950;
 }
 
+.product-title-block p,
 .product-body p {
     min-height: 72px;
     color: var(--muted);
+}
+
+.product-price-pill {
+    margin: 12px 0 14px;
+    padding: 10px 14px;
+    color: #fff;
+    background: var(--product-border, var(--accent));
+    border-radius: 999px;
+    font-size: 1.05rem;
+    font-weight: 950;
+    text-align: center;
+}
+
+.product-includes {
+    margin-bottom: 14px;
+    font-size: .92rem;
+}
+
+.product-includes strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.product-includes ul {
+    display: grid;
+    gap: 4px;
+    margin: 0;
+    padding-left: 18px;
+    color: #334155;
 }
 
 .product-meta {
@@ -524,11 +561,7 @@ a {
 }
 
 .product-meta strong {
-    color: #fff;
-    background: var(--product-border, var(--accent));
-    border-radius: 999px;
-    padding: 8px 14px;
-    text-align: center;
+    color: var(--accent);
 }
 
 .product-meta small {
@@ -570,7 +603,7 @@ a {
     border-radius: 20px;
     background:
         linear-gradient(rgba(255, 255, 255, .18), rgba(255, 255, 255, .25)),
-        image-set(url('./image/site/kayu.webp') type('image/webp'), url('./image/site/kayu.jpeg') type('image/jpeg'));
+        image-set(url('./kayu.webp') type('image/webp'), url('./kayu.jpeg') type('image/jpeg'));
     background-size: cover;
     background-position: center;
     box-shadow:
