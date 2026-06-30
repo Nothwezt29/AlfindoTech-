@@ -511,7 +511,24 @@ a {
     background: var(--product-border, var(--brand));
 }
 
+.product-media::after {
+    content: "";
+    position: absolute;
+    right: -2px;
+    bottom: -1px;
+    left: -2px;
+    height: 26%;
+    background:
+        linear-gradient(rgba(255, 255, 255, .04), rgba(255, 255, 255, .04)),
+        image-set(url('./kayu.webp') type('image/webp'), url('./kayu.jpeg') type('image/jpeg'));
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 54%, 12% 38%, 25% 58%, 39% 34%, 52% 58%, 66% 36%, 80% 56%, 92% 40%, 100% 52%, 100% 100%, 0 100%);
+}
+
 .product-media img {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -530,6 +547,18 @@ a {
         image-set(url('./kayu.webp') type('image/webp'), url('./kayu.jpeg') type('image/jpeg'));
     background-size: cover;
     background-position: center;
+}
+
+.product-body::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, .42);
+    border-radius: 12px;
 }
 
 .product-title-block {
@@ -1966,5 +1995,244 @@ html.admin-sidebar-collapsed .admin-main {
     body .product-grid,
     body .product-grid.product-grid-package {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body.product-page .section {
+        padding-top: 28px;
+    }
+
+    body.product-page .container {
+        width: 100%;
+        max-width: none;
+        padding-inline: 10px;
+    }
+
+    body .product-grid,
+    body .product-grid.product-grid-package {
+        gap: 16px 10px !important;
+    }
+
+    body .product-card {
+        border-width: 2px;
+        border-radius: 14px;
+        box-shadow:
+            0 0 0 3px rgba(255, 255, 255, .92),
+            0 0 0 4px color-mix(in srgb, var(--product-border, var(--brand)) 32%, transparent),
+            0 14px 28px rgba(11, 18, 32, .12);
+    }
+
+    body .product-card::before,
+    body .product-card::after {
+        width: 24px;
+        height: 24px;
+        border-width: 2px;
+    }
+
+    body .product-media,
+    body .product-card-package .product-media {
+        aspect-ratio: 1 / 1;
+        border-radius: 11px 11px 0 0;
+    }
+
+    body .product-media::after {
+        height: 18%;
+    }
+
+    body .product-body,
+    body .product-card-package .product-body {
+        padding: 10px;
+        border-radius: 0 0 11px 11px;
+    }
+
+    body .product-body::before {
+        inset: 7px;
+        border-radius: 9px;
+    }
+
+    body .product-title-block > span,
+    body .product-body > span,
+    body .product-card-package .product-title-block > span {
+        font-size: .58rem;
+    }
+
+    body .product-title-block h3,
+    body .product-body h3,
+    body .product-card-package .product-title-block h3 {
+        margin: 5px 0;
+        font-size: .78rem;
+        line-height: 1.12;
+    }
+
+    body .product-title-block p,
+    body .product-body p,
+    body .product-card-package .product-title-block p {
+        min-height: 0;
+        margin-bottom: 8px;
+        font-size: .68rem;
+        line-height: 1.35;
+    }
+
+    body .product-price-pill,
+    body .product-card-package .product-price-pill {
+        margin: 8px 0 10px;
+        padding: 7px 8px;
+        font-size: .72rem;
+        line-height: 1.1;
+    }
+
+    body .product-includes,
+    body .product-card-package .product-includes {
+        margin-bottom: 8px;
+        font-size: .66rem;
+        line-height: 1.35;
+    }
+
+    body .product-includes ul {
+        gap: 2px;
+        padding-left: 14px;
+    }
+
+    body .product-includes li:nth-child(n+5) {
+        display: none;
+    }
+
+    body .product-meta {
+        margin-bottom: 10px;
+    }
+
+    body .product-meta small,
+    body .product-card-package .product-meta small {
+        font-size: .64rem;
+        line-height: 1.25;
+        text-align: left;
+    }
+
+    body .product-actions,
+    body .product-card-package .product-actions {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+
+    body .product-actions .btn,
+    body .product-card-package .product-actions .btn {
+        min-height: 36px;
+        padding: 7px 4px;
+        font-size: .66rem;
+        line-height: 1.15;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body.product-page .navbar .container,
+    body.product-page main > .section > .container,
+    body.product-page .footer > .container {
+        width: 100%;
+        max-width: none;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    body.product-page .product-filter {
+        gap: 6px;
+        margin-bottom: 12px;
+    }
+
+    body.product-page .product-filter button,
+    body.product-page .product-filter a {
+        padding: 8px 10px;
+        font-size: .7rem;
+    }
+
+    body.product-page .product-grid,
+    body.product-page .product-grid.product-grid-package {
+        gap: 14px 8px !important;
+    }
+
+    body.product-page .product-card {
+        border-width: 2px;
+        border-radius: 12px;
+    }
+
+    body.product-page .product-media,
+    body.product-page .product-card-package .product-media {
+        aspect-ratio: 4 / 3;
+        border-radius: 9px 9px 0 0;
+    }
+
+    body.product-page .product-body,
+    body.product-page .product-card-package .product-body {
+        padding: 8px;
+    }
+
+    body.product-page .product-body::before {
+        display: none;
+    }
+
+    body.product-page .product-title-block > span,
+    body.product-page .product-body > span {
+        font-size: .54rem;
+    }
+
+    body.product-page .product-title-block h3,
+    body.product-page .product-body h3 {
+        display: -webkit-box;
+        overflow: hidden;
+        min-height: 2.3em;
+        margin: 4px 0;
+        font-size: .73rem;
+        line-height: 1.15;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    body.product-page .product-title-block p,
+    body.product-page .product-body p {
+        display: -webkit-box;
+        overflow: hidden;
+        min-height: 0;
+        margin-bottom: 7px;
+        font-size: .62rem;
+        line-height: 1.3;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+    body.product-page .product-price-pill {
+        margin: 6px 0 8px;
+        padding: 7px 6px;
+        font-size: .66rem;
+    }
+
+    body.product-page .product-includes {
+        margin-bottom: 6px;
+        font-size: .6rem;
+        line-height: 1.3;
+    }
+
+    body.product-page .product-includes strong {
+        margin-bottom: 3px;
+    }
+
+    body.product-page .product-includes ul {
+        gap: 1px;
+        padding-left: 12px;
+    }
+
+    body.product-page .product-includes li:nth-child(n+4),
+    body.product-page .product-meta {
+        display: none;
+    }
+
+    body.product-page .product-actions {
+        gap: 5px;
+    }
+
+    body.product-page .product-actions .btn {
+        min-height: 32px;
+        padding: 6px 3px;
+        font-size: .6rem;
+        line-height: 1.1;
     }
 }
